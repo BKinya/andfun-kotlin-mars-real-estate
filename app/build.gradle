@@ -23,6 +23,10 @@ apply plugin: "androidx.navigation.safeargs"
 
 android {
     compileSdkVersion 28
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
     dataBinding {
         enabled = true
     }
@@ -64,5 +68,7 @@ dependencies {
     // Core with Ktx
     implementation "androidx.core:core-ktx:$version_core"
 
-    // TODO (01) Add Dependencies for Retrofit with the Scalar Converter
+   //Retrofit with Scalar converter
+    implementation 'com.squareup.retrofit2:retrofit:2.7.1'
+    implementation 'com.squareup.retrofit2:converter-scalars:2.7.1'
 }
